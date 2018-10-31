@@ -1,41 +1,54 @@
 <!doctype html>
 
 <html>
-    <head>
-        <title>FlexCalendar</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="initial-scale=1.0">
-				<link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;subset=latin-ext" rel="stylesheet">
-				<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=latin-ext" rel="stylesheet">
-				<link rel="stylesheet" href="./css/style.css">
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="year">
-                <ul>
-                    <li class="prev">&#10094;</li>
-                    <li class="currentYear">2017</li>
-										<li class="next">&#10095;</li>
-                </ul>
-            </div>
-            <div class="months">
-							<ul>
-                <li>Styczeń</li>
-                <li>Luty</li>
-                <li>Marzec</li>
-                <li>Kwiecień</li>
-                <li>Maj</li>
-                <li>Czerwiec</li>
-                <li>Lipiec</li>
-                <li>Sierpień</li>
-                <li>Wrzesień</li>
-                <li>Październik</li>
-                <li>Listopad</li>
-                <li>Grudzień</li>
-							</ul>
-            </div>
+  <head>
+    <title>Calendar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond&amp;subset=latin-ext" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=latin-ext" rel="stylesheet">
+		<link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="year">
+        <button id="prev" onclick="modifyYear(-1)">&#10094;</button>
+        <input id="initYear" value="">
+				<button id="next" onclick="modifyYear(1)">&#10095;</button>
+      </div>
+      <div class="months" onclick="myFunction(event)">
+        <div class="month" >
+          <label id="0">Styczeń</label>
+          <ul class="hide">
+            <li>Pn</li>
+            <li>Wt</li>
+            <li>Śr</li>
+            <li>Cz</li>
+            <li>Pt</li>
+            <li>Sb</li>
+            <li>Nd</li>
+          </ul>
         </div>
-        <script src="./js/script.js"></script>
-    </body>
+        <div class="month" id="1">Luty</div>
+        <div class="month" id="2">Marzec</div>
+        <div class="month" id="3">Kwiecień</div>
+        <div class="month" id="4">Maj</div>
+        <div class="month" id="5">Czerwiec</div>
+        <div class="month" id="6">Lipiec</div>
+        <div class="month" id="7">Sierpień</div>
+        <div class="month" id="8">Wrzesień</div>
+        <div class="month" id="9">Październik</div>
+        <div class="month" id="10">Listopad</div>
+        <div class="month" id="11">Grudzień</div>
+      </div>
+    </div>
+
+    <div id="cookie-notice" class="hide">
+      <p>To jest cookie</p>
+      <button id="cookie-notice-button">Zamknij</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/local.js"></script>
+  </body>
 </html>
